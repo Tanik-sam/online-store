@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Сувенирные изделя из дерева">
+    <link rel="stylesheet" href="../../assets/sass/normalize.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/favicon/favicon-32x32.png">
+    <link type="Image/x-icon" href="../../assets/icons/favicons/favicon.ico" rel="icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon/favicon.ico">
+    <link rel="manifest" href="../../assets/icons/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Сувенирные изделя из дерева</title>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper header_wrapper">
+            <div class="logo">
+                <div class="wrapper logo-wrapper">
+                    <a class="header__logo" href="#">
+                        <div class="logo-image"></div>
+                    </a>
+                    <a class="header__logo logo-header" href="#">
+                        <h1 class="logo-header__title title">Сувенирные изделия из дерева</h1>
+                        <p class="subtitle">Уникальная часть Вашей жизни</p>
+                    </a>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-menu__item"><a href="index.html">О нас</a></li>
+                    <li class="nav-menu__item"><a href="../pets/index.html">Продукция</a></li>
+                    <li class="nav-menu__item"><a href="index.html#contacts">Контакты</a></li>
+                </ul>
+                <div class="hamburger-menu">
+
+                    <div class="menu__button">
+                        <span></span>
+                    </div>
+
+
+                </div>
+            </nav>
+            <div class="cart-btn-wrapper">
+                <a class="cart-btn" href="/cart">Cart
+                    <span class="cart-container">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512"
+                            height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                        <span class="cart-value">0</span>
+                    </span>
+                </a>
+                <button type="button" class="auth-btn">Login
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 640 512" height="1em"
+                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M624 208h-64v-64c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v64h-64c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h64v64c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-64h64c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm-400 48c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="header__wrapper"></div>
+    </header>
+
+    </header>
+    <main>
+        <div class="wrapper__main wrapper">
+            <div id="start">
+                <aside class="filter">
+                    <form>
+                        <div class="form-control"><input type="text" name="text" placeholder="Поиск"
+                                class="filter-input" value="">
+                        </div>
+                        <div class="form-control">
+                            <h3>Категория</h3>
+                            <div class="category">
+                                <button type="button" name="category" class="null">Все</button>
+                                <button type="button" name="category" class="null">Подставки под чашки</button>
+                                <button type="button" name="category" class="null">Подставки для смартфонов</button>
+                                <button type="button" name="category" class="null">Подставки под горячее</button>
+                                <button type="button" name="category" class="null">Брелоки</button>
+                                <button type="button" name="category" class="null">Другое</button>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <h3>Древесина</h3><select name="wood" class="filter-input">
+                                <option value="All">Все</option>
+                                <option value="Pine">Сосна</option>
+                                <option value="Birch">Береза</option>
+                                <option value="Larch">Лиственница</option>
+                                <option value="Oak">Дуб</option>
+                                <option value="Cherry">Вишня</option>
+                                <option value="Linden">Липа</option>
+                            </select>
+                        </div>
+                        <div class="form-control">
+                            <h3>Цвет пропитки</h3>
+                            <div class="colors">
+                                <button name="color" data-color="all" class="all-btn active">Все</button>
+                                <button name="color" class="color-btn-transp" data-color="#ff0000"></button>
+                                <button name="color" class="color-btn-chestnut" data-color="#00ff00" ></button>
+                                <button name="color" class="color-btn-mahagon" data-color="#0000ff" ></button>
+                                <button name="color" class="color-btn-nut" data-color="#000"></button>
+                                <button name="color" class="color-btn-dark-oak" data-color="#ffb900"></button>
+                            </div>
+                        </div>
+                        <div class="form-control">
+                            <h3>Цена</h3>
+                            <p class="price">150 бел.руб</p><input type="range" name="price" min="0" max="309999"
+                                value="309999">
+                        </div>
+                        <div class="form-control shipping"><label for="shipping">Бесплатная доставка</label><input
+                                type="checkbox" name="shipping" id="shipping"></div>
+                    </form><button type="button" class="Button_light">Сбросить фильтры</button>
+            </aside>
+        </div>
+        
+        <div class="content">
+            <section class="catalog-view">
+                <div class="btn-container">
+                  <div class="Button_like_light line-like active">
+                    <div class="line"></div>
+                  </div>
+                    <div class="Button_like_light block null">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div> 
+                </div>
+                </div>
+                <form><label for="sort" class="view_sort">Сортировать по</label><select name="sort" id="sort" class="filter-input">
+                        <option value="price-lowest">Цена (самая низкая)</option>
+                        <option value="price-highest">Цена (самая высокая)</option>
+                        <option value="name-a">Название (а - я)</option>
+                        <option value="name-z">Название (я - а)</option>
+                    </select>
+                </form>
+            </section>
+            <section class="catalog">
+                <div class="wrapper_catalog products-container">
+                    <article class="item">
+                        <div class="container"><img class="item-img" src="https://tryart.site/images/stand1.jpg" alt="stand"/>
+                            <a class="link" href="/products/recoM2MyHJGHLVi5l">
+                                <svg class="hidden"  stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg></a></div>
+                        <footer class="card">
+                            <h4>bar stool</h4>
+                            <p>Цена 20р</p>
+                        </footer>
+                    </article>
+                    <article class="item">
+                        <div class="container"><img src="https://tryart.site/images/stand2.jpg" class="item-img"  alt="stand"/>
+                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg></a></div>
+                                <footer class="card">
+                                    <h4>bar stool</h4>
+                                    <p>Цена 20р</p>
+                                </footer>
+                    </article>
+                    <article class="item">
+                        <div class="container"><img src="https://tryart.site/images/stand3.jpg" class="item-img"  alt="stand"/>
+                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg></a></div>
+                                <footer class="card">
+                                    <h4>bar stool</h4>
+                                    <p>Цена 25р</p>
+                                </footer>
+                    </article>  
+                    <article class="item">
+                        <div class="container"><img src="https://tryart.site/images/stand_s9.jpg" class="item-img"  alt="stand"/>
+                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg></a></div>
+                                <footer class="card">
+                                    <h4>bar stool</h4>
+                                    <p>Цена 25р</p>
+                                </footer>
+                    </article>
+                    <article class="item">
+                        <div class="container"><img src="https://tryart.site/images/stand7.jpg" class="item-img"  alt="stand"/>
+                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg></a></div>
+                                <footer class="card">
+                                    <h4>bar stool</h4>
+                                    <p>Цена 25р</p>
+                                </footer>
+                    </article>
+                    <article class="item">
+                        <div class="container"><img src="https://tryart.site/images/stand8.jpg" class="item-img"  alt="stand"/>
+                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                                    </path>
+                                </svg></a></div>
+                                <footer class="card">
+                                    <h4>bar stool</h4>
+                                    <p>Цена 25р</p>
+                                </footer>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="hr"></div>
+        <div class="wrapper">
+            <div class="Footer" id="contacts">
+
+                <div class="Footer__item Footer_item-1">
+                    <h5 class="Footer_Heading">По вопросам заказа изделия</h5>
+                    <p class="Footer_Subheading email"><a href="mailto:tanik.sam@yandex.ru">email@shelter.com</a></p>
+                    <p class="Footer_Subheading phone"><a href="tel:+136745677554">+13 674 567 75 54</a></p>
+                </div>
+                <div class="Footer__item-image"></div>
+            </div>
+            <div class="Footer__item Footer_end">
+                <h5>@2022 TrYArt All rights reserved</h5>
+            </div>
+        </div>
+    </footer>
+
+    <template id="sourceItemTemp">
+        <div class="source__item">
+            <span class="source__item-name"></span>
+        </div>
+    </template>
+
+    <template id="newsItemTemp">
+        <div class="news__item">
+            <div class="news__meta">
+                <div class="news__meta-photo"></div>
+                <ul class="news__meta-details">
+                    <li class="news__meta-author"></li>
+                    <li class="news__meta-date"></li>
+                </ul>
+            </div>
+            <div class="news__description">
+                <h2 class="news__description-title"></h2>
+                <h3 class="news__description-source"></h3>
+                <p class="news__description-content"></p>
+                <p class="news__read-more">
+                    <a href="#">Read More</a>
+                </p>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

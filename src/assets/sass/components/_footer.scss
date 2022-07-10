@@ -1,0 +1,49 @@
+.hr{
+    width:1300px;
+    height: 1px;
+    background: $color_dark;
+    margin: auto;
+}
+.email{
+
+        a{
+            text-decoration: none;
+            color:$color_primary;
+        }
+        &:before{
+            content:'';
+            background-image: url("../../assets/icons/icon-email.svg");
+            background-size: contain;
+            background-repeat:no-repeat;
+            width:2.6rem;
+            height:2rem;
+            display: inline-block;
+            z-index: 3;
+            margin-right: 0.5rem;
+        }}
+.phone{
+
+            a{
+                text-decoration: none;
+                color:$color_primary;
+            }
+            &:before{
+                content:'';
+                background-image: url("../../assets/icons/icon-phone.svg");
+                background-size: contain;
+            background-repeat:no-repeat;
+            width:2.6rem;
+            height:2rem;
+            display: inline-block;
+            z-index: 3;              
+            margin-right: 0.5rem;
+            }}
+
+            .Footer__item Footer_item-1{
+                text-align: left;
+            }
+            .Footer_end{
+                text-align:center;
+                margin: 0;
+            }
+           

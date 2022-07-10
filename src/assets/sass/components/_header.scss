@@ -1,0 +1,194 @@
+header {
+    left: 40px;
+    right: 40px;
+    top: 0;
+    z-index: 2;
+    margin:1rem 0;
+
+    @include respond-to(tablet) {
+        padding-top: 9px;
+        left: 27px;
+        right: 27px;
+    }
+
+    @include respond-to(small-devices) {
+        padding-top: 9px;
+        left: 12px;
+        right: 12px;
+    }
+
+    a {
+        text-decoration: none
+    }
+}
+.logo-image{
+    background-image: url("../../assets/icons/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+}
+.logo-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.logo{
+    position: relative;
+    max-width:400px;
+    @include respond-to(tablet) { max-width:210px ;}
+
+
+.title{ 
+    @include title-text-large;
+    margin:20px 0 0 10px;
+    
+    a{
+        text-decoration: none;
+        color:$color_primary;
+    }
+    
+}
+.subtitle{ 
+    @include title-text-small;
+    margin:10px;
+}
+}
+nav{
+    margin-top:24px;
+}
+.nav-menu{
+        a {
+        text-decoration: none;
+        display:inline-block;
+        color:#CDCDCD;
+        
+        &:hover{
+            color:$color-light-s;
+        }
+    }
+.nav-menu__item{
+    list-style: none;
+    @include paragraph-l;
+    margin: 0 0 0 40px;
+    &:nth-child(1){
+        border-bottom: 3px solid $color_primary;
+    }
+   }  
+    display:flex;
+    flex-direction: row;
+    justify-content: right;
+    @include respond-to(small-tablet) { display: none;}
+    @include respond-to(big-mob) { display: none;}
+    @include respond-to(small-mob) { display: none;}
+}
+
+.hamburger-menu{
+    @include respond-to(full-screen) { display: none} ;
+    @include respond-to(tablet) { display: none;}
+    @include respond-to(small-tablet) { display: block;}
+    @include respond-to(big-mob) { display: block;}
+    @include respond-to(small-mob) { display: block;}
+}
+
+.cart-btn-wrapper {
+    margin: 40px 0 0 10px;
+    .cart-btn,.auth-btn{
+        @include title-text-middle-blue;
+    }
+    .auth-btn{
+        background: none;
+        border: none;
+    }
+}
+
+
+@include respond-to(small-devices){
+    .active {
+        &:after{
+            content: '';
+            z-index: 1;
+            position: absolute;
+            left: -100vw;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: $color-overlay;
+            opacity: 50%;
+        }
+        .header_wrapper{
+            max-width: 320px;
+            display: block;  
+    }
+
+
+
+    transition: all .8s ease-out;
+        visibility: visible;
+        right: 0;
+      
+        position: fixed;
+    
+        top: 0;
+        left: calc(100% - 320px);
+        width: 320px;
+        height: 100%;
+        margin: 0;
+        padding: 9px 10px 0 0;
+        list-style: none;
+        text-align: center;
+        background-color: $color-radk-3xl;
+        z-index: 5;
+    
+    
+    .title{ 
+        @include title-text-large;
+        margin-bottom:10px;
+        
+        a{
+            text-decoration: none;
+            color:$color_primary;
+            
+        }
+        
+    }
+    .subtitle{ 
+        @include title-text-small;
+        margin:10px 0;
+        padding-left:4px;
+    }
+    .nav-menu{
+            display: block;
+            padding: 0 30px 0 30px;
+           
+            
+        }
+        .nav-menu__item{
+            list-style: none;
+            margin: 0;
+            color: $color_dark_hover;
+            display: block;
+        padding-top: 40px;
+       
+        @include paragraph-mob;
+        text-decoration: none;
+        &:hover {
+            background-color: $color-light-s;
+          }
+            &:nth-child(1){
+                border-bottom: 3px solid $color_primary;
+                
+                a{
+                    color:$color-light-s;
+                }
+            }
+        }
+     
+       
+      
+    }}
+    .menu__button > span,
+    .menu__button > span::before,
+    .menu__button > span::after {
+      background-color: $color_primary;
+    }

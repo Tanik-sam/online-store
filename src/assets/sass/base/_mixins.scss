@@ -1,0 +1,123 @@
+@mixin title-text-large {
+    font: {
+      family: $font_sansserif;
+      style:bold;
+      size: 26px;
+      weight: 600;
+    }
+    line-height: 100%;
+    color: $color_primary;
+    letter-spacing: 0.06em;
+  }
+  @mixin title-text-middle-blue {
+    font: {
+      family: $font_sansserif;
+      style: bold;
+      size: 20px;
+      weight: 500;
+    }
+    line-height: 110%;
+    color: $color_dark;
+    letter-spacing: 0.06em;
+  }
+
+  @mixin text-little-blue {
+    font: {
+      family: $font_sansserif;
+      style: bold;
+      size: 16px;
+      weight: 600;
+    }
+    line-height: 110%;
+    color: $color_dark;
+    letter-spacing: 0.06em;
+  }
+
+  @mixin title-text-small {
+  font: {
+      family: $font_sansserif;
+      style: normal;
+      weight: 400;
+      size: 13px;      
+  }
+   color: $color_dark_hover;
+  letter-spacing: 0.1em;
+}
+@mixin title-text-small-dark {
+  font: {
+      family: $font_sansserif;
+      style: normal;
+      weight: 400;
+      size: 13px;
+  }
+  color: $color_dark;
+  line-height: 15px;
+  letter-spacing: 0.06em;
+}
+@mixin  paragraph-l{
+    font-family: $font_sansserif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%; 
+    color: $color_dark_hover;
+  }
+  @mixin  paragraph-mob{
+  font-family: $font_sansserif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 160%;
+  //letter-spacing: 0.06em;
+  }
+  @mixin h3-mobile{
+    font-family: $font_sansserif;
+font-weight: 400;
+font-size: 25px;
+line-height: 130%;
+letter-spacing: 0.06em;
+  }
+
+@mixin buttons{
+  cursor: pointer;
+    position:relative;
+    background-color:$color_primary;
+    padding:0.5rem 1.5rem;
+    border-radius: 0.5rem;;
+    text-decoration: none;
+    color: $color_dark;
+    font: {
+        family: $font_sansserif;
+        style: normal;
+        size: 16px;
+        weight: 600;
+      }
+      line-height: 130%;
+letter-spacing: 0.06em;
+width: fit-content;
+&:hover{
+    background-color:$color_primary_hover;
+}
+}
+
+@mixin respond-to($media) {
+  @if $media == full-screen {
+    @media (min-width: 1280px) { @content; }
+  }
+
+  @if $media == tablet {
+    @media (min-width:$tablet-width) and (max-width: 1279px) { @content; }
+  }
+  @else if $media == small-tablet {
+    @media (min-width:$mobile-big-width) and (max-width: 767px) { @content; }
+  }
+  @else if $media == big-mob {
+    @media (min-width:$mobile-small-width) and (max-width: 413px) { @content; }
+  }
+  @else if $media == small-mob {
+    @media (max-width: 319px) { @content; }
+  }
+  @else if $media == small-devices{
+    @media (max-width: 767px) { @content; }
+  }
+}

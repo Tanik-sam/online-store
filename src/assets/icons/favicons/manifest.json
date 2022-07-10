@@ -1,0 +1,26 @@
+{
+    "lang": "ru",
+    "dir": "ltr",
+    "name": "Запасные части для сельскохозяйственного оборудования",
+    "description": "Запасные части для сельскохозяйственного оборудования",
+    "short_name": "Запчасти",
+    "icons": [{
+        "src": "./icons/favicon/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/webp"
+    },{
+        "src": "./icons/favicon/favicon.ico",
+        "sizes": "16x16"
+    }],
+    "scope": "/index/",
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "orientation": "landscape",
+    "theme_color": "aliceblue",
+    "background_color": "white",
+    "screenshots": [{
+        "src": "./icons/favicon/favicon-32x32.png",
+        "sizes": "640x480",
+        "type": "image/jpeg"
+    }]
+}

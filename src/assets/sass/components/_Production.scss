@@ -1,0 +1,88 @@
+.wrapper__main{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top:4rem;
+    margin-bottom: 1rem;
+}
+.filter{
+    min-width: 16rem;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.content{
+
+   margin-left:10rem;
+}
+.catalog-view{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.wrapper_catalog{
+    margin-top:2rem;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:2rem
+}
+.category >.null,.category >.active {
+    cursor: pointer;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin: 0.25em 0px;
+    padding: 0.25rem 0px;
+    background: transparent;
+    border-color: transparent;
+    @include text-little-blue;
+    text-align: left;
+}
+.filter-input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+.price, .shipping{
+    @include text-little-blue;
+    padding: 0.25rem 0;
+}
+.colors >*{
+    cursor: pointer;
+}
+.color-btn-transp{
+    background-image: url("../../assets/images/color_transp.jpg");
+}
+.color-btn-chestnut{
+    background-image: url("../../assets/images/color_chestnut.jpg");
+}
+.color-btn-mahagon{
+    background-image: url("../../assets/images/color_mahagon.jpg");
+}
+.color-btn-nut{
+    background-image: url("../../assets/images/color_nut.jpg");
+}
+.color-btn-dark-oak{
+    background-image: url("../../assets/images/color_dark-oak.jpg");
+}
+.all-btn{
+    @include text-little-blue;
+    padding: 0.25rem 0;
+    background-color: transparent;
+    border: none;
+}
+.color-btn-transp,
+.color-btn-chestnut,
+.color-btn-mahagon, 
+.color-btn-nut, 
+.color-btn-dark-oak{
+    background-size: contain;
+    height: 1rem;
+    width: 1.5rem;
+    margin: 0.2rem;
+    border: none;
+}

@@ -1,0 +1,69 @@
+@import  "../../assets/sass/abstract/constant";
+@import  "../../assets/sass/abstract/placeholders";
+
+@import  "../../assets/sass/base/logo";
+@import  "../../assets/sass/base/base";
+@import  "../../assets/sass/base/mixins";
+@import  "../../assets/sass/base/buttons";
+
+@import  "../../assets/sass/layouts/wrapper";
+
+
+@import  "../../assets/sass/components/header";
+@import  "../../assets/sass/components/Start-screen-content";
+@import  "../../assets/sass/components/Card";
+@import  "../../assets/sass/components/Production";
+@import  "../../assets/sass/components/footer";
+@import  "../../assets/sass/base/modal";
+
+h1{
+    margin-top: 0;
+    font-weight: bolder;
+}
+h2 {
+    font: {
+        family: $font_serif;
+        style: normal;
+        size: 44px;
+        weight: 400;
+    }
+
+    color:#ffff;
+    line-height: 130%;
+    @include respond-to(small-devices) {
+        @include h3-mobile;
+    }
+}
+h3{ font: {
+        family: $font_sansserif;
+        style: normal;
+        size: 26px;
+        weight: 400;
+        color: $color_primary;
+      }
+      letter-spacing: 0.06em;
+      line-height: 100%;
+      text-align: left;
+      color: $color_primary;
+      margin: 1rem 0;
+      @include respond-to(small-devices){
+        @include h3-mobile;
+        
+    }
+}
+h4{
+    font-family: $font_sansserif;
+    font-style:normal;
+    font-size: 26px;
+    font-weight: 400;
+    color: $color_dark;
+}
+h5{
+   font-family: $font_sansserif;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 110%;
+   letter-spacing: 0.06em;
+   color: $color_dark;
+   }

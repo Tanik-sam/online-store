@@ -4,14 +4,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const EslingPlugin = require('eslint-webpack-plugin');
 
+
 const baseConfig = {
   entry: path.resolve(__dirname, './src/index.ts'),
   mode: 'development',
   module: {
     rules: [
       {
-        test: /.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(scss|css)$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /.ts$/i,
@@ -25,7 +26,7 @@ const baseConfig = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.js','.css','.sass'],
   },
   output: {
     filename: 'index.js',
@@ -33,11 +34,12 @@ const baseConfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
+      template: path.resolve(__dirname, './src/pages/main/index.html'),
       filename: 'index.html',
     }),
     new CleanWebpackPlugin(),
     new EslingPlugin({ extensions: 'ts' }),
+    
   ],
 };
 

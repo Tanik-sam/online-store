@@ -1,0 +1,76 @@
+
+.Start-screen-content{
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding-top:180px;
+    justify-content: center;
+    @include respond-to(tablet){
+        padding-top:116px;
+    }
+    @include respond-to(small-devices){
+        padding-top:120px;
+    }
+
+.Content{
+    margin-top:123px;
+    margin-left:40px;
+    margin-right: 40px;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    max-width:460px;
+    @include respond-to(tablet){
+        justify-content: center;
+        margin-top:0;
+    }
+    @include respond-to(small-devices){
+        justify-content: center;
+        margin:30px 10px 0 10px; 
+    }
+    .Heading{
+        max-width:310px;
+        @include respond-to(small-devices){
+            text-align: center;
+            margin: auto;
+            max-width:230px;
+        }
+        
+       
+    }
+    .Subheading{
+        margin:10px 0 36px 0;
+        @include paragraph-l;
+        @include respond-to(tablet){
+            margin:0 0 42px 0;
+        }
+        @include respond-to(small-devices){
+            text-align: center;
+            margin:40px 0 40px 0;
+        }
+        
+    }
+}
+.Start-screen-puppy{
+    position: relative;
+    width:698px;
+    height: 728px;
+    background-image: url("../../assets/images/wood.jpg");
+    @include respond-to(tablet){ 
+        width:569px;
+        height: 593px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left:130px;
+    margin-top:102px}
+    @include respond-to(small-devices){ 
+        width:260px;
+        height: 271px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left:60px;
+    margin-top:105px}
+    
+    
+}
+}
