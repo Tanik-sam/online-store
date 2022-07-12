@@ -23,6 +23,18 @@ const baseConfig = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+     /* подключение fontawesome {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        type: 'asset/inline'
+    },*/
+    {
+      test: /\.(svg|eot|woff|woff2|ttf)$/,
+      type: 'asset/resource',
+      generator: {
+        //publicPath: '../fonts/',
+        filename: 'compiled/fonts/[hash][ext][query]'
+      }
+   },
     ],
   },
   resolve: {
@@ -36,6 +48,10 @@ const baseConfig = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/pages/main/index.html'),
       filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'second.html',
+      template: path.resolve(__dirname, './src/pages/about/second.html')
     }),
     new CleanWebpackPlugin(),
     new EslingPlugin({ extensions: 'ts' }),

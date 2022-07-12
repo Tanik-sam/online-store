@@ -34,8 +34,8 @@
             </div>
             <nav>
                 <ul class="nav-menu">
-                    <li class="nav-menu__item"><a href="index.html">О нас</a></li>
-                    <li class="nav-menu__item"><a href="../pets/index.html">Продукция</a></li>
+                    <li class="nav-menu__item"><a href="../about/second.html">О нас</a></li>
+                    <li class="nav-menu__item"><a href="index.html">Продукция</a></li>
                     <li class="nav-menu__item"><a href="index.html#contacts">Контакты</a></li>
                 </ul>
                 <div class="hamburger-menu">
@@ -79,50 +79,51 @@
             <div id="start">
                 <aside class="filter">
                     <form>
-                        <div class="form-control"><input type="text" name="text" placeholder="Поиск"
+                        <div class="form-control"><input id="search" type="text" name="text" placeholder="Поиск"
                                 class="filter-input" value="">
                         </div>
                         <div class="form-control">
                             <h3>Категория</h3>
                             <div class="category">
-                                <button type="button" name="category" class="null">Все</button>
-                                <button type="button" name="category" class="null">Подставки под чашки</button>
-                                <button type="button" name="category" class="null">Подставки для смартфонов</button>
-                                <button type="button" name="category" class="null">Подставки под горячее</button>
-                                <button type="button" name="category" class="null">Брелоки</button>
-                                <button type="button" name="category" class="null">Другое</button>
+                                <button type="button" name="Все" class="null">Все</button>
+                                <button type="button" name="Подставки под чашки" class="null">Подставки под чашки</button>
+                                <button type="button" name="Подставки для смартфонов" class="null">Подставки для смартфонов</button>
+                                <button type="button" name="Подставки под горячее" class="null">Подставки под горячее</button>
+                                <button type="button" name="Брелоки" class="null">Брелоки</button>
+                                <button type="button" name="Другое" class="null">Другое</button>
                             </div>
                         </div>
                         <div class="form-control">
-                            <h3>Древесина</h3><select name="wood" class="filter-input">
-                                <option value="All">Все</option>
-                                <option value="Pine">Сосна</option>
-                                <option value="Birch">Береза</option>
-                                <option value="Larch">Лиственница</option>
-                                <option value="Oak">Дуб</option>
-                                <option value="Cherry">Вишня</option>
-                                <option value="Linden">Липа</option>
+                            <h3>Древесина</h3><select name="wood" class="wood-select filter-input">
+                                <option value="Все">Все</option>
+                                <option value="Сосна/Ель">Сосна</option>
+                                <option value="Береза">Береза</option>
+                                <option value="Лиственница">Лиственница</option>
+                                <option value="Дуб">Дуб</option>
+                                <option value="Вишня">Вишня</option>
+                                <option value="Липа">Липа</option>
+                                <option value="Другое">Другое</option>
                             </select>
                         </div>
                         <div class="form-control">
                             <h3>Цвет пропитки</h3>
                             <div class="colors">
-                                <button name="color" data-color="all" class="all-btn active">Все</button>
-                                <button name="color" class="color-btn-transp" data-color="#ff0000"></button>
-                                <button name="color" class="color-btn-chestnut" data-color="#00ff00" ></button>
-                                <button name="color" class="color-btn-mahagon" data-color="#0000ff" ></button>
-                                <button name="color" class="color-btn-nut" data-color="#000"></button>
-                                <button name="color" class="color-btn-dark-oak" data-color="#ffb900"></button>
+                                <button  type="button" name="Все" title="Все" class="all-btn active">Все</button>
+                                <button  type="button" name="прозрачный" title="прозрачный" class="color-btn-transp"></button>
+                                <button  type="button" name="каштан" title="каштан" class="color-btn-chestnut"></button>
+                                <button  type="button" name="махагон" title="махагон" class="color-btn-mahagon"></button>
+                                <button  type="button" name="орех" title="орех" class="color-btn-nut"></button>
+                                <button  type="button" name="дуб" title="дуб" class="color-btn-dark-oak"></button>
                             </div>
                         </div>
                         <div class="form-control">
                             <h3>Цена</h3>
-                            <p class="price">150 бел.руб</p><input type="range" name="price" min="0" max="309999"
-                                value="309999">
+                            <p class="price">50 бел. руб</p><input id="price" type="range" name="price" min="0" max="50"
+                                value="50">
                         </div>
                         <div class="form-control shipping"><label for="shipping">Бесплатная доставка</label><input
                                 type="checkbox" name="shipping" id="shipping"></div>
-                    </form><button type="button" class="Button_light">Сбросить фильтры</button>
+                    </form><button type="button" id="reset" class="Button_light">Сбросить фильтры</button>
             </aside>
         </div>
         
@@ -159,76 +160,11 @@
                                     </path>
                                 </svg></a></div>
                         <footer class="card">
-                            <h4>bar stool</h4>
+                            <h4>Подставка</h4>
                             <p>Цена 20р</p>
                         </footer>
                     </article>
-                    <article class="item">
-                        <div class="container"><img src="https://tryart.site/images/stand2.jpg" class="item-img"  alt="stand"/>
-                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                    </path>
-                                </svg></a></div>
-                                <footer class="card">
-                                    <h4>bar stool</h4>
-                                    <p>Цена 20р</p>
-                                </footer>
-                    </article>
-                    <article class="item">
-                        <div class="container"><img src="https://tryart.site/images/stand3.jpg" class="item-img"  alt="stand"/>
-                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                    </path>
-                                </svg></a></div>
-                                <footer class="card">
-                                    <h4>bar stool</h4>
-                                    <p>Цена 25р</p>
-                                </footer>
-                    </article>  
-                    <article class="item">
-                        <div class="container"><img src="https://tryart.site/images/stand_s9.jpg" class="item-img"  alt="stand"/>
-                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                    </path>
-                                </svg></a></div>
-                                <footer class="card">
-                                    <h4>bar stool</h4>
-                                    <p>Цена 25р</p>
-                                </footer>
-                    </article>
-                    <article class="item">
-                        <div class="container"><img src="https://tryart.site/images/stand7.jpg" class="item-img"  alt="stand"/>
-                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                    </path>
-                                </svg></a></div>
-                                <footer class="card">
-                                    <h4>bar stool</h4>
-                                    <p>Цена 25р</p>
-                                </footer>
-                    </article>
-                    <article class="item">
-                        <div class="container"><img src="https://tryart.site/images/stand8.jpg" class="item-img"  alt="stand"/>
-                            <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-                                    </path>
-                                </svg></a></div>
-                                <footer class="card">
-                                    <h4>bar stool</h4>
-                                    <p>Цена 25р</p>
-                                </footer>
-                    </article>
-
+                   
                 </div>
             </section>
         </div>
@@ -236,28 +172,61 @@
         </div>
         </div>
     </main>
-    <footer>
+    <footer id="contacts">
         <div class="hr"></div>
-        <div class="wrapper">
-            <div class="Footer" id="contacts">
-
-                <div class="Footer__item Footer_item-1">
-                    <h5 class="Footer_Heading">По вопросам заказа изделия</h5>
-                    <p class="Footer_Subheading email"><a href="mailto:tanik.sam@yandex.ru">email@shelter.com</a></p>
-                    <p class="Footer_Subheading phone"><a href="tel:+136745677554">+13 674 567 75 54</a></p>
+        <div class="wrapper Footer-items">
+        <div class="Footer__item Footer_item-1">
+            <h5 class="Footer_Heading">По вопросам заказа изделия</h5>
+            <div class="logo-awe logo_email">
+                <a href="mailto:tanik.sam@yandex.ru"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="Footer_Subheading"><a class="Footer_Subheading" href="mailto:tanik.sam@yandex.ru">tanik.sam@yandex.ru</a>
+            </p>
+            <div class="logo-awe logo_phone">
+                <a href="tel:+136745677554"> <i class="fas fa-phone"></i></a>
+            </div>
+            <p class="Footer_Subheading"><a class="Footer_Subheading" href="tel:+136745677554">+13 674 567 75 54</a></p>
+        </div>
+        <div class="Footer__item Footer_item-2">
+            <h5 class="Footer_Heading">Свяжитесь с нами!</h5>
+            <div class="wrapper__logo">
+                <div class="logo-awe logo_instagram">
+                    <i class="fab fa-instagram"></i>
                 </div>
-                <div class="Footer__item-image"></div>
+                <div class="logo-awe logo_facebook">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <div class="logo-awe logo_youtube">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="logo-awe logo_telegram">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+        
             </div>
-            <div class="Footer__item Footer_end">
-                <h5>@2022 TrYArt All rights reserved</h5>
-            </div>
+        </div>
+            <div class="Footer__item-image"></div>
+        </div>
+        <div class="Footer__item Footer_end">
+            <h5>@2022 TrYArt All rights reserved</h5>
+        </div>
         </div>
     </footer>
 
-    <template id="sourceItemTemp">
-        <div class="source__item">
-            <span class="source__item-name"></span>
-        </div>
+    <template id="cardItemTemp">
+        <article class="item">
+            <div class="container"><div class="item-img"></div>
+                <a class="link" href="/products/recotY5Nh00DQFdkm"><svg class="hidden"   stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                        </path>
+                    </svg></a></div>
+                    <footer class="card">
+                        <h4></h4>
+                        <p>Цена <span></span> р.</p>
+                    </footer>
+        </article>
     </template>
 
     <template id="newsItemTemp">

@@ -64,14 +64,14 @@ nav{
         color:#CDCDCD;
         
         &:hover{
-            color:$color-light-s;
+            color:$color_light;
         }
     }
 .nav-menu__item{
     list-style: none;
     @include paragraph-l;
     margin: 0 0 0 40px;
-    &:nth-child(1){
+    &:nth-child(2){
         border-bottom: 3px solid $color_primary;
     }
    }  
@@ -173,13 +173,13 @@ nav{
         @include paragraph-mob;
         text-decoration: none;
         &:hover {
-            background-color: $color-light-s;
+            background-color: $color_light;
           }
             &:nth-child(1){
                 border-bottom: 3px solid $color_primary;
                 
                 a{
-                    color:$color-light-s;
+                    color:$color_light;
                 }
             }
         }

@@ -17,6 +17,7 @@
     "license": "ISC",
     "homepage": "",
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^6.1.1",
         "@typescript-eslint/eslint-plugin": "^5.30.5",
         "@typescript-eslint/parser": "^5.30.5",
         "clean-webpack-plugin": "^3.0.0",
