@@ -24,8 +24,7 @@ function Filter(): IData[] {
     return newArr;
 }
 
-function Category(name: string): IData[] {
-    const arr: IData[] = data;
+function Category(name: string, arr: IData[]): IData[] {
     if (name == 'Все') return arr;
     const newArr: IData[] = arr.filter(function (obj: IData) {
         return obj.category == name;
@@ -33,8 +32,7 @@ function Category(name: string): IData[] {
     return newArr;
 }
 
-function Selection(val: string): IData[] {
-    const arr: IData[] = data;
+function Selection(val: string, arr: IData[]): IData[] {
     if (val == 'Все') return arr;
     const newArr: IData[] = arr.filter(function (obj: IData) {
         return obj.woodType == val;
@@ -42,8 +40,7 @@ function Selection(val: string): IData[] {
     return newArr;
 }
 
-function WoodColor(name: string): IData[] {
-    const arr: IData[] = data;
+function WoodColor(name: string, arr: IData[]): IData[] {
     if (name == 'Все') return arr;
     const newArr: IData[] = arr.filter(function (obj: IData) {
         return obj.woodColor == name;
@@ -51,16 +48,14 @@ function WoodColor(name: string): IData[] {
     return newArr;
 }
 
-function PriceChange(val: number): IData[] {
-    const arr: IData[] = data;
+function PriceChange(val: number, arr: IData[]): IData[] {
     const newArr: IData[] = arr.filter(function (obj: IData) {
         return obj.price <= val;
     });
     return newArr;
 }
 
-function Check(check: boolean): IData[] {
-    const arr: IData[] = data;
+function Check(check: boolean, arr: IData[]): IData[] {
     if (!check) return arr;
     const newArr: IData[] = arr.filter(function (obj: IData) {
         return obj.freeShipping === true;
@@ -68,9 +63,33 @@ function Check(check: boolean): IData[] {
     return newArr;
 }
 
+function Sorting(name: string, arr: IData[]): IData[] {
+    switch (name) {
+        case 'price-lowest':
+            arr.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-highest':
+            arr.sort((a, b) => b.price - a.price);
+            break;
+        case 'name-z':
+            arr.sort((a, b) => {
+                if (b.name < a.name) return -1;
+                if (b.name > a.name) return 1;
+            });
+            break;
+        case 'name-a':
+            arr.sort((a, b) => {
+                if (b.name > a.name) return -1;
+                if (b.name < a.name) return 1;
+            });
+            break;
+    }
+    return arr;
+}
+
 function Reseter(): IData[] {
     const arr: IData[] = data;
     return arr;
 }
 
-export { Filter, Category, Selection, WoodColor, PriceChange, Check, Reseter };
+export { Filter, Category, Selection, WoodColor, PriceChange, Check, Sorting, Reseter };

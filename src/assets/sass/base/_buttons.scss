@@ -4,7 +4,7 @@
     border: none;
     margin: 1.5rem 0;  
 }
-.Button_like_light{
+.Button_like-light{
   box-sizing: border-box;
   @include buttons;
   @extend %transition;

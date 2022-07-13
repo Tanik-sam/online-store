@@ -4,7 +4,7 @@ class Card {
     draw(data: IData[]) {
         const fragment = document.createDocumentFragment() as DocumentFragment;
         const cardItemTemp = document.querySelector('#cardItemTemp') as HTMLTemplateElement;
-
+        const cardItemTempRow = document.querySelector('#cardItemTempRow') as HTMLTemplateElement;
         data.forEach((item) => {
             const cardClone = cardItemTemp.content.cloneNode(true) as HTMLElement;
 
@@ -17,7 +17,6 @@ class Card {
 
             fragment.append(cardClone);
         });
-
         document.querySelector('.products-container').innerHTML = '';
         document.querySelector('.products-container').append(fragment);
     }

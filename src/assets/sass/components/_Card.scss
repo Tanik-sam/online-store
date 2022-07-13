@@ -32,7 +32,7 @@
     top: 8px;
   }
 
-  .block {
+  .block-like {
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
@@ -54,6 +54,28 @@
     width: 220px;
     height: 200px;
 }
+.item-row_item-img{
+    background-size: contain;
+    display: block;
+    width: 220px;
+    height: 200px;
+    float:left;
+}
+.item_art, .item_name, .item_cat, .item_epo, .item_epo-color, .item_wood, .item_wood-color,.item_price,.item_shipping {
+    float:left;
+    text-align: left;
+    width: 100%;
+    font-family: $font_sansserif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    color: $color_light;
+    text-align: center;
+    margin: 1rem 0 1rem 0
+}
+
 .card> *{
     font-family: $font_sansserif;
     font-style: normal;
@@ -65,8 +87,6 @@
     text-align: center;
     margin: 1rem 0 1rem 0
     }
-
-
 
 .hidden{
     display: none;
