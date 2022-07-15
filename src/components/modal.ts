@@ -40,6 +40,7 @@ class Modal {
         });
         const addToCart: HTMLInputElement = document.querySelector('.add-to-cart');
         addToCart.addEventListener('click', (e: Event) => {
+            console.log('trtr');
             let userCart: IUserCart = {
                 art:item.art,
                 name: item.name,

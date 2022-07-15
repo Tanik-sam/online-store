@@ -52,7 +52,7 @@
     height: 0.9rem;
     background-color: $color_dark;
 }
-.container{
+.container, .container_row{
     position: relative;
 }
 
@@ -127,6 +127,17 @@
     position: absolute;
     top: 65px;
     left: 75px;
+    width: 80px;
+    height: 80px;
+    color:  transparent;
+    &:hover{
+        color: $color_light2;
+    }
+}
+.hidden_row {   
+    position: absolute;
+    top: 90px;
+    left: 100px;
     width: 80px;
     height: 80px;
     color:  transparent;

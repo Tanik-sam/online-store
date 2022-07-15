@@ -29,6 +29,7 @@ class Card {
                 (cardClone.querySelector('.item-row_item-img') as HTMLElement).style.backgroundImage = `url(${
                     item.image || 'img/news_placeholder.jpg'
                 })`;
+                cardClone.querySelector('.container_row').classList.add(item.art);
                 cardClone.querySelector('.item_art').textContent = item.art;
                 cardClone.querySelector('.item_name').textContent = item.name;
                 cardClone.querySelector('.item_cat').textContent = item.category;
@@ -44,14 +45,14 @@ class Card {
         }
         document.querySelector('.products-container').innerHTML = '';
         document.querySelector('.products-container').append(fragment);
-        const mod = document.querySelectorAll('.hidden');
+        const mod = document.querySelectorAll('.hidden, .hidden_row');
         for (let i = 0; i < mod.length; i++) {
             mod[i].addEventListener('click', (e: Event) => {
                 console.log((e.target as HTMLElement).parentElement.closest('div').className);
                 const items: IData[] = data.filter(function (obj: IData) {
                     return (
                         obj.art ===
-                        (e.target as HTMLElement).parentElement.closest('.container').className.split(' ')[1]
+                        (e.target as HTMLElement).parentElement.closest('.container, .container_row').className.split(' ')[1]
                     );
                 });
                 this.modal.drawModal(items[0]);
