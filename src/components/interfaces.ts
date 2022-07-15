@@ -11,3 +11,10 @@ export interface IData {
     freeShipping: boolean;
     image: string;
 }
+export interface IUserCart{
+    art: string;
+    img: string;
+    name: string;
+    price: number;
+    quntity: number;
+}

@@ -19,6 +19,9 @@
     line-height: 110%;
     color: $color_dark;
     letter-spacing: 0.06em;
+    &:hover{
+      color: $color_light;
+    }
   }
 
   @mixin text-little-blue {
@@ -96,7 +99,7 @@ letter-spacing: 0.06em;
 letter-spacing: 0.06em;
 width: fit-content;
 &:hover{
-    background-color:$color_primary_hover;
+    background-color:$color_light;
 }
 }
 

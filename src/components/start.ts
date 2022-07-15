@@ -1,14 +1,17 @@
 import data from '../../data.json';
 import { ShopView } from './shopView';
+import Cart from './cart';
 import { IData } from './interfaces';
 import { Filter, Category, Selection, WoodColor, PriceChange, Check, Reseter, Sorting } from './filters';
 
 class Start {
     private view;
+    private cart;
     constructor() {
         this.view = new ShopView();
+        this.cart = new Cart();
     }
-    viewView:string='line-like';
+    user = localStorage.shopUser || null;
     dataFiltered: IData[] = data;
     categoryBeforeChange: IData[] = data.slice();
     changeCategory = false;
@@ -24,14 +27,15 @@ class Start {
         window.addEventListener('load', (e: Event) => {
             this.dataFiltered = Sorting('price-lowest', this.dataFiltered);
             this.view.drawCard(this.dataFiltered);
+            this.user = localStorage.shopUser ? localStorage.shopUser : localStorage.setItem('shopUser', 'unknown');
         });
         const line: HTMLElement = document.querySelector('.line-like');
         line.addEventListener('click', (e: Event) => {
-            this.view.changeView('line-like');
+            this.view.drawCard(this.dataFiltered, 'line-like');
         });
         const block: HTMLElement = document.querySelector('.block-like');
         block.addEventListener('click', (e: Event) => {
-            this.view.changeView('block-like');
+            this.view.drawCard(this.dataFiltered, 'block-like');
         });
         const screen: HTMLElement = document.getElementById('search');
         const input: string = (document.getElementById('search') as HTMLInputElement | null).value;
@@ -108,9 +112,12 @@ class Start {
         });
         const sorting: HTMLElement = document.getElementById('sort') as HTMLInputElement | null;
         sorting.addEventListener('change', (e: Event) => {
-            console.log((e.target as HTMLButtonElement).value);
             this.dataFiltered = Sorting((e.target as HTMLButtonElement).value, this.dataFiltered);
             this.view.drawCard(this.dataFiltered);
+        });
+        const cart: HTMLElement = document.querySelector('.cart-btn') as HTMLInputElement | null;
+        cart.addEventListener('click', (e: Event) => {
+            this.cart.drawCart();
         });
     }
 }

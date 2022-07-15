@@ -16,7 +16,9 @@
 @import  "../../assets/sass/components/Card";
 @import  "../../assets/sass/components/Production";
 @import  "../../assets/sass/components/footer";
+@import  "../../assets/sass/components/Cart";
 @import  "../../assets/sass/base/modal";
+
 
 $fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts";
 @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
@@ -28,13 +30,13 @@ h1{
 }
 h2 {
     font: {
-        family: $font_serif;
+        family: $font_sansserif;
         style: normal;
-        size: 44px;
+        size: 28px;
         weight: 400;
     }
-
-    color:#ffff;
+    margin: 0 0 0.5rem 0;
+    color: $color_dark;
     line-height: 130%;
     @include respond-to(small-devices) {
         @include h3-mobile;
@@ -60,9 +62,11 @@ h3{ font: {
 h4{
     font-family: $font_sansserif;
     font-style:normal;
-    font-size: 26px;
-    font-weight: 400;
-    color: $color_light;
+    font-size: 20px;
+    font-weight: 600;
+    color: $color_dark2;
+    margin: 0px;
+    padding: 0px;
 }
 h5{
     margin: 0;

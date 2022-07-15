@@ -1,82 +1,117 @@
-
-.view_sort{
+.view_sort {
     @include text-little-blue;
     padding: 0.25rem;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-.line, .line::before, .line::after{  
+
+.line,
+.line::before,
+.line::after {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: $color_dark;    
+    background-color: $color_dark;
 }
 
 
-.line{
-    top: 1.2rem; 
+.line {
+    top: 1.2rem;
     width: 2.4rem;
     margin-left: 0.3rem;
 }
-.line::before{
+
+.line::before {
     content: '';
     top: -8px;
-  }
-  .line::after{
+}
+
+.line::after {
     content: '';
     top: 8px;
-  }
+}
 
-  .block-like {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      vertical-align: middle;
-      gap: 0.1rem;
-      width: 3rem;
-      padding: 0.2rem;
-  }
-.square{
-       width: 0.9rem;
-       height: 0.9rem;
-       background-color: $color_dark;  
-   }
+.block-like {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align: middle;
+    gap: 0.1rem;
+    width: 3rem;
+    padding: 0.2rem;
+}
 
-.item-img{
+.square {
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: $color_dark;
+}
+.container{
+    position: relative;
+}
+
+.item-img {
     background-size: contain;
     display: block;
     width: 220px;
     height: 200px;
+    border-radius: 0.5rem;
 }
-.item-row_item-img{
+
+.item-row_item-img {
     background-size: contain;
     display: block;
-    width: 220px;
-    height: 200px;
-    float:left;
+    width: 280px;
+    height: 254px;
+    float: left;
+    border-radius: 0.5rem;
 }
-.item_art, .item_name, .item_cat, .item_epo, .item_epo-color, .item_wood, .item_wood-color,.item_price,.item_shipping {
-    float:left;
+
+.item_data {
     text-align: left;
     width: 100%;
     font-family: $font_sansserif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 15px;
     line-height: 100%;
     letter-spacing: 0.06em;
     color: $color_light;
-    text-align: center;
-    margin: 1rem 0 1rem 0
+    margin: 0 0 0.8rem 1rem;
 }
 
-.card> *{
+.item_art,
+.item_name,
+.item_cat,
+.item_epo,
+.item_epo-color,
+.item_wood,
+.item_wood-color,
+.item_price,
+.item_shipping {
+    display: inline;
+    font-weight: 400;
+    font-style: italic;
+    color: $color_primary;
+}
+
+.item-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    border: 0.2rem solid $color_dark;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.card>* {
     font-family: $font_sansserif;
     font-style: normal;
     font-weight: 400;
@@ -86,8 +121,16 @@
     color: $color_light;
     text-align: center;
     margin: 1rem 0 1rem 0
-    }
+}
 
-.hidden{
-    display: none;
+.hidden {   
+    position: absolute;
+    top: 65px;
+    left: 75px;
+    width: 80px;
+    height: 80px;
+    color:  transparent;
+    &:hover{
+        color: $color_light2;
+    }
 }

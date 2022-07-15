@@ -4,11 +4,26 @@
     border: none;
     margin: 1.5rem 0;  
 }
+.Button_transp{
+  @include buttons;
+  @extend %transition;
+  margin: 0.4rem 0;  
+  background-color: transparent;
+  padding: 0 1rem 0 1rem;
+  border-color: $color_dark;
+  font: {
+    family: $font_sansserif;
+    style: normal;
+    size: 32px;
+    weight: 600;
+  }
+}
 .Button_like-light{
   box-sizing: border-box;
   @include buttons;
   @extend %transition;
-  border: none;
+  border: 1px solid $color_primary;
+  background-color: transparent;
   margin-right: 0.5rem; 
   height: 2.5rem;
   width: 3rem;

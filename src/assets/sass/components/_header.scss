@@ -95,6 +95,10 @@ nav{
     margin: 40px 0 0 10px;
     .cart-btn,.auth-btn{
         @include title-text-middle-blue;
+        display: inline;
+        &:hover{
+            cursor: pointer;
+        }
     }
     .auth-btn{
         background: none;
