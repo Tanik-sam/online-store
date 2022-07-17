@@ -1,5 +1,6 @@
 import { IData, IUserCart } from './interfaces';
 import Cart from './cart';
+import Card from './card';
 
 class Modal {
     private cart;
@@ -7,11 +8,15 @@ class Modal {
         this.cart = new Cart();
     }
     drawModal(item: IData) {
+        const userS: string = localStorage.getItem('shopUser');
+        const itemAddedOne: IUserCart[] = JSON.parse(localStorage.getItem(userS)).filter(
+            (i: IUserCart) => i.art === item.art
+        );
         const fragment = document.createDocumentFragment() as DocumentFragment;
         const modal = document.querySelector('#modal') as HTMLTemplateElement;
         const cardClone = modal.content.cloneNode(true) as HTMLElement;
         (cardClone.querySelector('.modal-window__img') as HTMLElement).style.backgroundImage = `url(${
-            item.image || 'img/news_placeholder.jpg'
+            item.image || 'img/placeholder.jpg'
         })`;
         cardClone.querySelector('.modal-window_art').textContent = item.art;
         cardClone.querySelector('.modal-window_name').textContent = item.name;
@@ -30,7 +35,11 @@ class Modal {
             document.querySelector('.products-container').removeChild(document.querySelector('.overlay'));
         });
         const cartDec: HTMLElement = document.querySelector('.amount-btn_dec');
-        const amount: string = (document.querySelector('.amount') as HTMLElement).innerText;
+        let amount: string = (document.querySelector('.amount') as HTMLElement).innerText;
+        if (itemAddedOne[0]) {
+            amount = itemAddedOne[0].quntity.toString();
+            this.cart.chosen = itemAddedOne[0].quntity;
+        }
         cartDec.addEventListener('click', (e: Event) => {
             (document.querySelector('.amount') as HTMLElement).innerHTML = this.cart.dec(parseInt(amount)).toString();
         });
@@ -40,9 +49,8 @@ class Modal {
         });
         const addToCart: HTMLInputElement = document.querySelector('.add-to-cart');
         addToCart.addEventListener('click', (e: Event) => {
-            console.log('trtr');
-            let userCart: IUserCart = {
-                art:item.art,
+            const userCart: IUserCart = {
+                art: item.art,
                 name: item.name,
                 img: item.image,
                 price: item.price,

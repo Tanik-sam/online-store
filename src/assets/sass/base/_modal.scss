@@ -16,15 +16,15 @@
     background-size: contain;
     float:left;
     margin: 1rem;
-    width: 400px;
-    height: 380px;
+    width: 500px;
+    height: 480px;
 }
 
 .modal-window {
     position: relative;
     border-radius: 10px;
     background-color: $color_light2;
-    width: 1000px;
+    width: 60%;
     min-height: 500px;
     max-height: 90%;
     text-align: left;
@@ -32,7 +32,6 @@
     @extend %custom-scroll;
 
 }
-
 
 .modal-window__item {
     margin: 0;

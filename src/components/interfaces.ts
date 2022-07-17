@@ -10,6 +10,7 @@ export interface IData {
     price: number;
     freeShipping: boolean;
     image: string;
+    date: string;
 }
 export interface IUserCart{
     art: string;
@@ -17,4 +18,11 @@ export interface IUserCart{
     name: string;
     price: number;
     quntity: number;
+}
+export interface IFilterType{
+    cat: {val:boolean,fil:string},
+    sel: {val:boolean,fil:string},
+    wColor: {val:boolean,fil:string},
+    pChange: {val:boolean,fil:number},
+    ch: {val:boolean,fil:boolean}
 }

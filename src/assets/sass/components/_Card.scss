@@ -83,7 +83,10 @@
     line-height: 100%;
     letter-spacing: 0.06em;
     color: $color_light;
-    margin: 0 0 0.8rem 1rem;
+    margin: 0 0 0.6rem 1rem;
+}
+.added{
+    box-shadow: 0px 0px 4px 4px $color_light;;
 }
 
 .item_art,
@@ -94,7 +97,8 @@
 .item_wood,
 .item_wood-color,
 .item_price,
-.item_shipping {
+.item_shipping,
+.item_date {
     display: inline;
     font-weight: 400;
     font-style: italic;

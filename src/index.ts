@@ -4,7 +4,6 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 import Start from './components/start';
-import { Filter } from './components/filters';
 import { IData } from './components/interfaces';
 import data from '../data.json';
 

@@ -3,6 +3,16 @@
     @extend %transition;
     border: none;
     margin: 1.5rem 0;  
+    border: 2px solid $color_light;
+    color:$color_light2; 
+}
+.Button_blue{
+  @include buttons;
+  @extend %transition;
+  border: none;
+  margin: 1.5rem 0;  
+  border: 2px solid $color_light;
+  color:$color_dark; 
 }
 .Button_transp{
   @include buttons;
@@ -48,68 +58,3 @@
     padding:15px 45px;
     @extend %transition;
 }
-.pagination{              
-        background-repeat: no-repeat;
-        background-position: center center;
-        border: 2px solid $color_primary;
-        border-radius: 50%;
-        width:52px;
-        height:52px;
-        position: absolute;
-        z-index: 4;
-        margin: 0 15px;  
-        @extend %transition;
-        &:hover{
-            background-color:$color_primary_hover;
-        }
-    }
-
-
-  
-  .menu__button {
-    display: flex; 
-    align-items: center;
-    position: absolute;
-    top: 45px;
-    right: 50px;
-    @include respond-to(small-mob){right: 3vh;}
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 3;
-  }
-  
-  .menu__button > span,
-  .menu__button > span::before,
-  .menu__button > span::after {
-    display: block;
-    position: absolute;
-    
-    width: 100%;
-    height: 2px;
-    background-color: $color_primary;
-  }
-  .menu__button > span::before {
-    content: '';
-    top: -8px;
-  }
-  .menu__button > span::after {
-    content: '';
-    top: 8px;
-  }
-  .rotated{
-    transform: rotate(90deg);  
-    @extend %transition;
-  }
-  /*второй вариант закрытого меню
-  #menu__toggle:checked ~ .menu__button > span {
-    transform: rotate(45deg);
-  }
-  #menu__toggle:checked ~ .menu__button > span::before {
-    top: 0;
-    transform: rotate(0);
-  }
-  #menu__toggle:checked ~ .menu__button > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }*/

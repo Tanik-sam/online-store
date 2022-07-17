@@ -86,7 +86,7 @@ letter-spacing: 0.06em;
     position:relative;
     background-color:$color_primary;
     padding:0.5rem 1.5rem;
-    border-radius: 0.5rem;;
+    border-radius: 0.5rem;
     text-decoration: none;
     color: $color_dark;
     font: {
@@ -100,6 +100,7 @@ letter-spacing: 0.06em;
 width: fit-content;
 &:hover{
     background-color:$color_light;
+    color: $color_dark
 }
 }
 

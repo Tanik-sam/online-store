@@ -1,12 +1,10 @@
 .wrapper{
-    max-width:1300px;
+    max-width:70%;
     margin:auto;
-
 }
 .header_wrapper{
     display: flex;
     direction: row;
     justify-content: space-between;
-    z-index: 2;
-    
+    z-index: 2;    
 }

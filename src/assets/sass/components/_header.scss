@@ -78,22 +78,13 @@ nav{
     display:flex;
     flex-direction: row;
     justify-content: right;
-    @include respond-to(small-tablet) { display: none;}
-    @include respond-to(big-mob) { display: none;}
-    @include respond-to(small-mob) { display: none;}
-}
-
-.hamburger-menu{
-    @include respond-to(full-screen) { display: none} ;
-    @include respond-to(tablet) { display: none;}
-    @include respond-to(small-tablet) { display: block;}
-    @include respond-to(big-mob) { display: block;}
-    @include respond-to(small-mob) { display: block;}
 }
 
 .cart-btn-wrapper {
+    position: relative;
     margin: 40px 0 0 10px;
     .cart-btn,.auth-btn{
+        margin-right: 1rem;
         @include title-text-middle-blue;
         display: inline;
         &:hover{
@@ -106,93 +97,27 @@ nav{
     }
 }
 
+.cart-value {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color_light2;
+    font-weight: 600;
+    top: -20px;
+    right: 6.5rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: $color_primary;
+    border: 2px solid $color_light;
+    border-radius: 50%;
+   
+}
 
 @include respond-to(small-devices){
-    .active {
-        &:after{
-            content: '';
-            z-index: 1;
-            position: absolute;
-            left: -100vw;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: $color-overlay;
-            opacity: 50%;
-        }
-        .header_wrapper{
-            max-width: 320px;
-            display: block;  
-    }
-
-
-
-    transition: all .8s ease-out;
-        visibility: visible;
-        right: 0;
-      
-        position: fixed;
-    
-        top: 0;
-        left: calc(100% - 320px);
-        width: 320px;
-        height: 100%;
-        margin: 0;
-        padding: 9px 10px 0 0;
-        list-style: none;
-        text-align: center;
-        background-color: $color-radk-3xl;
-        z-index: 5;
-    
     
     .title{ 
-        @include title-text-large;
+        font-size: 16px;
         margin-bottom:10px;
-        
-        a{
-            text-decoration: none;
-            color:$color_primary;
-            
-        }
-        
     }
-    .subtitle{ 
-        @include title-text-small;
-        margin:10px 0;
-        padding-left:4px;
-    }
-    .nav-menu{
-            display: block;
-            padding: 0 30px 0 30px;
-           
-            
-        }
-        .nav-menu__item{
-            list-style: none;
-            margin: 0;
-            color: $color_dark_hover;
-            display: block;
-        padding-top: 40px;
-       
-        @include paragraph-mob;
-        text-decoration: none;
-        &:hover {
-            background-color: $color_light;
-          }
-            &:nth-child(1){
-                border-bottom: 3px solid $color_primary;
-                
-                a{
-                    color:$color_light;
-                }
-            }
-        }
-     
-       
-      
-    }}
-    .menu__button > span,
-    .menu__button > span::before,
-    .menu__button > span::after {
-      background-color: $color_primary;
-    }
+}
