@@ -9,9 +9,11 @@ class Modal {
     }
     drawModal(item: IData) {
         const userS: string = localStorage.getItem('shopUser');
-        const itemAddedOne: IUserCart[] = JSON.parse(localStorage.getItem(userS)).filter(
-            (i: IUserCart) => i.art === item.art
-        );
+        let itemAddedOne: IUserCart[] = [];
+        const local = JSON.parse(localStorage.getItem(userS));
+        if (local && local[0]) {
+            itemAddedOne = local.filter((i: IUserCart) => i.art === item.art);
+        }
         const fragment = document.createDocumentFragment() as DocumentFragment;
         const modal = document.querySelector('#modal') as HTMLTemplateElement;
         const cardClone = modal.content.cloneNode(true) as HTMLElement;

@@ -37,9 +37,11 @@ class Card {
                 (cardClone.querySelector('.item-row_item-img') as HTMLElement).style.backgroundImage = `url(${
                     item.image || 'img/placeholder.jpg'
                 })`;
-                for (let i = 0; i < itemAdded.length; i++) {
-                    if (itemAdded[i].art == item.art) {
-                        (cardClone.querySelector('.item-row_item-img') as HTMLElement).classList.add('added');
+                if (itemAdded && itemAdded[0]) {
+                    for (let i = 0; i < itemAdded.length; i++) {
+                        if (itemAdded[i].art == item.art) {
+                            (cardClone.querySelector('.item-row_item-img') as HTMLElement).classList.add('added');
+                        }
                     }
                 }
                 cardClone.querySelector('.container_row').classList.add(item.art);
