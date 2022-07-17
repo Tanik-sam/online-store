@@ -7,12 +7,5 @@ import Start from './components/start';
 import { IData } from './components/interfaces';
 import data from '../data.json';
 
-/*let dataFiltered: IData[] = data;
-const screen: HTMLElement = document.getElementById('search');
-const input: string = (document.getElementById('search') as HTMLInputElement | null).value;
-screen.addEventListener('input', (e: Event) => {
-    dataFiltered = Filter();
-});
-const container: HTMLElement = document.querySelector('products-container');*/
 const go = new Start();
 go.start();
