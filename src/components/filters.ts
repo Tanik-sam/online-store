@@ -38,6 +38,9 @@ class FilterNew {
             arr = newArr.slice();
         }
         if (this.filtration.select.val == true) {
+            if (this.filtration.select.data == 'Другое') {
+                this.filtration.select.data = 'Пластик';
+            }
             const newArr = arr.filter((obj: IData) => {
                 return obj.woodType == this.filtration.select.data;
             });
@@ -65,7 +68,7 @@ class FilterNew {
     }
     category(name: string): IData[] {
         if (name == 'Все') {
-            this.filtration.categ.val == false;
+            this.filtration.categ.val = false;
             return this.allFilters();
         }
         this.filtration.categ.val = true;
@@ -75,7 +78,7 @@ class FilterNew {
 
     selection(val: string): IData[] {
         if (val == 'Все') {
-            this.filtration.select.val == false;
+            this.filtration.select.val = false;
             return this.allFilters();
         }
         this.filtration.select.val = true;
@@ -85,7 +88,7 @@ class FilterNew {
 
     woodColor(name: string): IData[] {
         if (name == 'Все') {
-            this.filtration.woodC.val == false;
+            this.filtration.woodC.val = false;
             return this.allFilters();
         }
         this.filtration.woodC.val = true;

@@ -1,10 +1,5 @@
 header {
-    left: 40px;
-    right: 40px;
-    top: 0;
-    z-index: 2;
-    margin:1rem 0;
-
+    padding-top: 1rem;
     @include respond-to(tablet) {
         padding-top: 9px;
         left: 27px;
@@ -32,11 +27,13 @@ header {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    margin: 0;
 }
 .logo{
     position: relative;
-    max-width:400px;
-    @include respond-to(tablet) { max-width:210px ;}
+    max-width:20rem;
+    @include respond-to(tablet) { max-width:14rem ;}
+    @include respond-to(full-screen){ max-width:28rem ;}
 
 
 .title{ 
@@ -56,6 +53,8 @@ header {
 }
 nav{
     margin-top:24px;
+    @include respond-to(small-devices) {
+        margin-top:10px;}
 }
 .nav-menu{
         a {
@@ -70,8 +69,8 @@ nav{
 .nav-menu__item{
     list-style: none;
     @include paragraph-l;
-    margin: 0 0 0 40px;
-    &:nth-child(2){
+    margin: 0 0 0 1rem;
+    &:nth-child(1){
         border-bottom: 3px solid $color_primary;
     }
    }  
@@ -90,10 +89,19 @@ nav{
         &:hover{
             cursor: pointer;
         }
+        @include respond-to (tablet){
+            margin-right: 0.2rem; 
+        }
+        @include respond-to (small-devices){
+            margin-right: 0.2rem; 
+        }
     }
     .auth-btn{
         background: none;
         border: none;
+    }
+    @include respond-to (small-devices){
+        margin: 20px 0 0 10px;
     }
 }
 
@@ -111,6 +119,16 @@ nav{
     background-color: $color_primary;
     border: 2px solid $color_light;
     border-radius: 50%;
+    @include respond-to (tablet){
+        right: 4rem;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    @include respond-to (small-devices){
+        right: 4rem;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
    
 }
 

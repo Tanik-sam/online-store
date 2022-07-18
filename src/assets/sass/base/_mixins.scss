@@ -22,6 +22,12 @@
     &:hover{
       color: $color_light;
     }
+    @include respond-to(tablet) {
+      font-size: 14px;
+    }
+    @include respond-to(small-devices) {
+      font-size: 14px;
+    }
   }
 
   @mixin text-little-blue {
@@ -110,7 +116,7 @@ width: fit-content;
   }
 
   @if $media == tablet {
-    @media (min-width:$tablet-width) and (max-width: 1279px) { @content; }
+    @media (min-width:$tablet-width) and (max-width: 1280px) { @content; }
   }
   @else if $media == small-tablet {
     @media (min-width:$mobile-big-width) and (max-width: 767px) { @content; }

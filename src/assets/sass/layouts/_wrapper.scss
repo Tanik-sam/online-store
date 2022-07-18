@@ -1,10 +1,25 @@
 .wrapper{
-    max-width:70%;
+    max-width:60%;
     margin:auto;
+    @include respond-to(tablet){
+        max-width:90%;
+    }
+    @include respond-to(small-devices){
+        max-width:90%;
+    }
 }
 .header_wrapper{
     display: flex;
     direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    z-index: 2;    
+    z-index: 2;   
+    max-width:60%; 
+    margin:auto;
+    @include respond-to(tablet){
+        max-width:90%;
+    }
+    @include respond-to(small-devices){
+        max-width:90%;
+    }
 }

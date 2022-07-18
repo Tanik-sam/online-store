@@ -20,6 +20,14 @@
     width: 150px;
     height: 110px;
     justify-self: left;
+    @include respond-to(tablet) {
+        width: 66px;
+        height: 60px;
+    }
+    @include respond-to(small-devices) {
+        width: 66px;
+        height: 60px;
+    }
 }
 
 .fa-trash-can{
